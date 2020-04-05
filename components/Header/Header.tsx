@@ -11,12 +11,17 @@ export const Header = () => {
             <s.NavList>
                 <s.NavItem className={router.pathname === "/" ? "active" : ""}>
                     <Link href="/">
-                        <s.NavLink title="Last Post">Last Post</s.NavLink>
+                        <s.NavLink title="Home">Home</s.NavLink>
                     </Link>
                 </s.NavItem>
-                <s.NavItem className={router.pathname === "/posts" ? "active" : ""}>
+                <s.NavItem className={router.pathname.includes('/posts') ? "active" : ""}>
                     <Link href="/posts">
                         <s.NavLink title="List of posts">List of posts</s.NavLink>
+                    </Link>
+                </s.NavItem>
+                <s.NavItem className={router.pathname.includes('/post') ? "active" : ""}>
+                    <Link href="/post">
+                        <s.NavLink title="Post">Post</s.NavLink>
                     </Link>
                 </s.NavItem>
                 <s.NavItem  className={router.pathname === "/new" ? "active" : ""}>

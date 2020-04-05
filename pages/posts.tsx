@@ -13,8 +13,8 @@ export default function Posts() {
     const[isModalOpen, setIsModalOpen] = useState(false);
     const[currentPost, setCurrentPost] = useState<Post|null>(null);
 
-    const getPosts = () => {
-        axios.get(BASE_URL)
+    const getPosts = async () => {
+       await axios.get(BASE_URL)
             .then(function(response) {
                 const postList = response.data.reverse();
                 setPosts(postList);
@@ -25,11 +25,11 @@ export default function Posts() {
             .finally(function () {
 
             });
-    }
+    };
 
     useEffect(() => {
         getPosts();
-    }, [posts]);
+    }, []);
 
     const handleClickEdit = (id) => {
         setIsModalOpen(true);
@@ -38,11 +38,12 @@ export default function Posts() {
 
     const editPost = (post) => {
         axios({
-            method: 'patch',
+            method: 'PUT',
             url: `${BASE_URL}/${currentPost.id}`,
             data: post,
         });
 
+        getPosts();
         setIsModalOpen(false);
         setCurrentPost(null);
     };
@@ -55,13 +56,13 @@ export default function Posts() {
 
     const closeModal = () => {
         setIsModalOpen(false);
-    }
+    };
 
     return (
         <Layout>
             <list.List>
                 {posts.map(post => (
-                    <Card key={`${post.id}-${post.title} `} title={post.title} id={post.id}>
+                    <Card key={`${post.id}-${post.title} `} title={post.title}>
                             <list.BtnWrapper>
                                 <list.Button type="button" onClick={() => handleClickEdit(post.id)}>
                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

@@ -3,17 +3,16 @@ import { card } from "./CardStyles";
 import Link from 'next/link';
 
 interface Props {
-    id?: string;
     title?: string;
     children?: any;
 }
 
-export const Card: FC<Props> = ({id, title, children }) => {
+export const Card: FC<Props> = ({ title, children }) => {
     return (
         <card.Item>
             <card.ItemWrapper>
                 <card.Title>
-                    <Link href={`/posts/${id}`}>
+                    <Link href={`/post?title=${title}`}>
                         <a title={ title} >{ title }</a>
                     </Link>
                 </card.Title>
