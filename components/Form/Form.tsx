@@ -1,8 +1,8 @@
 import React, {useState, FC} from 'react';
-import {errorMess, newPost} from "../../pages/styles/PostStyles";
-import axios from "axios";
+import {errorMess } from "../../pages/styles/PostStyles";
+import { Label, Input, Textarea, Button } from './FormStyles';
 import { v4 } from 'uuid';
-
+import { Post } from '../../utils/interfaces';
 
 interface Props {
     onSubmitForm: (post?: Post) => void;
@@ -47,26 +47,26 @@ export const Form: FC<Props> = ({ onSubmitForm, currentPost }) => {
     return (
         <form action="#" onSubmit={handleSubmitCreate}>
             {error && <errorMess.TitleError>{error}</errorMess.TitleError>}
-            <newPost.Label htmlFor="title">
+            <Label htmlFor="title">
                 <p>Post`s title</p>
-                <newPost.Input
+                <Input
                     placeholder="Input Title of Post"
                     id="title"
                     type="text"
                     value={post.title}
                     onChange={handleTitle}
                 />
-            </newPost.Label>
-            <newPost.Label htmlFor="body">
+            </Label>
+            <Label htmlFor="body">
                 <p>Post`s text</p>
-                <newPost.Textarea
+                <Textarea
                     placeholder="Input Body of Post"
                     id="body"
                     value={post.body}
                     onChange={handleBody}
                 />
-            </newPost.Label>
-            <newPost.Button type="submit">{currentPost ? 'Edit post' : 'Create post'}</newPost.Button>
+            </Label>
+            <Button type="submit">{currentPost ? 'Edit post' : 'Create post'}</Button>
         </form>
     );
-}
+};

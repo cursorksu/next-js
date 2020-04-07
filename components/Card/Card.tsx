@@ -1,23 +1,29 @@
 import React, {FC} from 'react';
-import { card } from "./CardStyles";
+import { ItemWrapper, Item, Title } from "./CardStyles";
 import Link from 'next/link';
 
 interface Props {
     title?: string;
     children?: any;
+    isLink: boolean;
 }
 
-export const Card: FC<Props> = ({ title, children }) => {
-    return (
-        <card.Item>
-            <card.ItemWrapper>
-                <card.Title>
+export const Card: FC<Props> = ({ title, isLink, children }) => (
+    <Item>
+        <ItemWrapper>
+            {isLink
+                ?
+                (<Title>
                     <Link href={`/post?title=${title}`}>
-                        <a title={ title} >{ title }</a>
+                        <a title={title}>{title}</a>
                     </Link>
-                </card.Title>
-                { children }
-            </card.ItemWrapper>
-        </card.Item>
-    );
-}
+                </Title>)
+                :
+                (<Title>
+                    {title}
+                </Title>)
+            }
+            { children }
+        </ItemWrapper>
+    </Item>
+);

@@ -1,49 +1,71 @@
 import styled from 'styled-components';
 
-export const s = {
-    Nav: styled.nav `
-        margin: 0;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #888;
-        text-align: left;
-        background-color: #f3969a;
-        position: sticky;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        width: 100%;
-        margin-bottom: 40px;
-`,
-    NavList: styled.ul`
-        display: flex;
-        justify-content: center;
-        padding-left: 0;
-        margin: 15px 0;
-        list-style: none;
-    `,
-    NavItem: styled.li`
-        transition: background-color 0.3s ease-in-out;
-        margin: 0 12px;
-        
-        &:hover {
-            background: rgba(255,255,255,0.3);
-        }
-        
-        &.active {
-            background: #fff;
-            & a {
-                color:  #f3969a;
-            }
-        }
-    `,
-    NavLink: styled.a`
-        display: block;
-        padding: 0.5rem 1rem;
-        color: #fff;
-        text-decoration: none;
-        background-color: transparent;
-    `,
-};
+export const Input = styled.input `
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    line-height: 40px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    padding: 0 12px;
+    font-family: "Raleway", sans-serif;
+    color: rgba (0, 0, 0, 0.4);
+    border-bottom: 2px solid #f3969a;
+    
+    &:placeholder-shown {
+        font-family: "Raleway", sans-serif;
+        color: rgba (0, 0, 0, 0.4);
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    `;
+
+export const Textarea = styled.textarea `
+    box-sizing: border-box;
+    width: 100%;
+    height: 150px;
+    display: block;
+    line-height: 1.2;
+    background: transparent;
+    font-size: 14px;
+    padding: 12px;
+    font-family: "Raleway", sans-serif;
+    color: rgba (0, 0, 0, 0.4);
+    border: 2px solid #f3969a;
+    
+    &:placeholder-shown {
+        font-family: "Raleway", sans-serif;
+        color: rgba (0, 0, 0, 0.4);
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    `;
+
+export const Label = styled.label `
+    font-family: "Comfortaa", sans-serif;
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+`;
+
+export const Button = styled.button `
+    border: 2px solid #f3969a;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    line-height: 40px;
+    background: #f3969a;
+    color: #fff;
+    font-family: "Comfortaa", sans-serif;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+    
+    &:hover {
+        background: rgba(243, 150, 154, 0.8) ;
+    }
+`;

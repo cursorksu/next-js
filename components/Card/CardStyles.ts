@@ -13,8 +13,7 @@ const SlideBottom = keyframes`
   }
 `;
 
-export const card = {
-    BtnWrapper: styled.div `
+export const BtnWrapper =  styled.div `
         position: absolute;
         top: 10px;
         right: 10px;
@@ -22,9 +21,10 @@ export const card = {
         align-items: center;
         justify-content: space-between;
         transform: translateY(-200px);
-    `,
+    `;
 
-    Button: styled.div `
+
+export const Button =  styled.button `
         border-radius: 50%;
         border: none;
         background: #f3969a;
@@ -40,9 +40,9 @@ export const card = {
             width: 22px;
             height: 22px;
         }
-    `,
+    `;
 
-    Item: styled.div`
+export const Item =  styled.div `
         min-width: 500px;
         max-width: 100%;
         position: relative;
@@ -73,9 +73,9 @@ export const card = {
             left: auto;
             transform: rotate(3deg);
             }
-    `,
+    `;
 
-    ItemWrapper: styled.div`
+export const ItemWrapper =  styled.div `
         box-sizing: border-box;
         width: 100%;
         height: 100%;
@@ -86,9 +86,9 @@ export const card = {
         z-index: 1;
         overflow: hidden;
         text-overflow: ellipsis;
-    `,
+    `;
 
-    Title: styled.h2 `
+export const Title =  styled.h2 `
         font-family: "Comfortaa",sans-serif;
         text-align: center;
         line-height: 1.2;
@@ -124,5 +124,4 @@ export const card = {
             right: 0;
             z-index: 1;
         }
-    `,
-}
+    `;

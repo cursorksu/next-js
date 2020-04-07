@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var BASE_URL = 'https://simple-blog-api.crew.red/posts';","map":{"version":3,"sources":["F:/TestTasks/next-js/utils/constants.ts"],"names":["BASE_URL"],"mappings":"AAAA,OAAQ,IAAMA,QAAQ,GAAE,wCAAhB","sourcesContent":["export  const BASE_URL ='https://simple-blog-api.crew.red/posts';"]},"metadata":{},"sourceType":"module"}

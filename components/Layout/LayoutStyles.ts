@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-export const s = {
-   Wrapper: styled.div `
+export const Wrapper = styled.div `
     max-width: 1200px;
     padding: 40px 20px;
     margin: 0 auto;
@@ -9,5 +8,4 @@ export const s = {
     justify-content:center;
     align-items: center;
     flex-direction: column;
-`,
-};
+`;

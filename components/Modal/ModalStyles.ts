@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-export const modal = {
-    Backdrop: styled.div `
+export const Backdrop = styled.div `
         position: fixed;
         left: 0;
         right: 0;
@@ -13,8 +12,9 @@ export const modal = {
         display: flex;
         align-items: center;
         justify-content: center;
-`,
-    Wrapper: styled.div`
+`;
+
+export const Wrapper = styled.div `
         min-width: 400px;
         padding-top: 16px;
         position: relative;
@@ -23,11 +23,9 @@ export const modal = {
         @media (max-width: 600px) {
           min-width: 100%;
         }
-    `,
-    Content: styled.div`
-       
-    `,
-    BtnClose: styled.a`
+    `;
+
+export const BtnClose = styled.button `
         position: absolute;
         top: 20px;
         right: 20px;
@@ -59,5 +57,8 @@ export const modal = {
             height: 22px;
           }
         }
-    `,
-};
+    `;
+
+export const Content = styled.div `
+        padding: 0;
+    `;

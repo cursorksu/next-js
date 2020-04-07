@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Header } from '../Header';
-import { s } from './LayoutStyles';
+import { Wrapper } from './LayoutStyles';
 
 interface Props {
     children?: any;
@@ -8,9 +8,9 @@ interface Props {
 
 export const Layout: FC<Props> = ({ children }) => {
     return (
-        <s.Wrapper>
+        <Wrapper>
             <Header />
             { children }
-        </s.Wrapper>
+        </Wrapper>
     );
 }

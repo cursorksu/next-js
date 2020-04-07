@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-export const s = {
-    Nav: styled.nav `
+export const Nav = styled.nav `
         margin: 0;
         font-size: 1rem;
         font-weight: 400;
@@ -16,15 +15,17 @@ export const s = {
         z-index: 2;
         width: 100%;
         margin-bottom: 40px;
-`,
-    NavList: styled.ul`
+`;
+
+export const NavList = styled.ul `
         display: flex;
         justify-content: center;
         padding-left: 0;
         margin: 15px 0;
         list-style: none;
-    `,
-    NavItem: styled.li`
+    `;
+
+export const NavItem = styled.li `
         transition: background-color 0.3s ease-in-out;
         margin: 0 12px;
         
@@ -38,12 +39,13 @@ export const s = {
                 color:  #f3969a;
             }
         }
-    `,
-    NavLink: styled.a`
+    `;
+
+export const NavLink = styled.a `
+        font-family: "Comfortaa", sans-serif;
         display: block;
         padding: 0.5rem 1rem;
         color: #fff;
         text-decoration: none;
         background-color: transparent;
-    `,
-};
+    `;

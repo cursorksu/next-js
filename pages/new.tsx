@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { v4 } from 'uuid';
 import axios from 'axios';
 import { Modal  } from '../components/Modal';
 import { Layout  } from '../components/Layout';
@@ -25,17 +24,17 @@ export default function New() {
     const closeModal = () => {
         setIsModalOpen(false);
         setCurrentTitle('');
-    }
+    };
 
     return (
         <Layout>
-            <Card title="Create new post now!">
-                <Form onSubmitForm={setNewPost} />
+            <Card title="Create new post now!" isLink={false}>
+              <Form onSubmitForm={setNewPost} />
             </Card>
             {isModalOpen &&
                 <Modal onClose={closeModal} title={currentTitle}>
-                  <p>Success!!!</p>
-                  <p>The post was successfully added!</p>
+                    <p>Success!!!</p>
+                    <p>The post was successfully added!</p>
                 </Modal>
             }
         </Layout>

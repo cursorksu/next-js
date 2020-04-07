@@ -6,12 +6,15 @@ import { list } from './styles/PostStyles';
 import {Modal} from "../components/Modal";
 import {Form} from "../components/Form";
 
+import { Provider } from 'react-redux';
+import { store } from '../store/store';
+
 const BASE_URL ='https://simple-blog-api.crew.red/posts';
 
 export default function Posts() {
     const[posts, setPosts] = useState ([]);
     const[isModalOpen, setIsModalOpen] = useState(false);
-    const[currentPost, setCurrentPost] = useState<Post|null>(null);
+    const[currentPost, setCurrentPost] = useState<any|null>(null);
 
     const getPosts = async () => {
        await axios.get(BASE_URL)
@@ -28,6 +31,7 @@ export default function Posts() {
     };
 
     useEffect(() => {
+        console.log('useEffect')
         getPosts();
     }, []);
 
@@ -41,11 +45,10 @@ export default function Posts() {
             method: 'PUT',
             url: `${BASE_URL}/${currentPost.id}`,
             data: post,
-        });
-
-        getPosts();
-        setIsModalOpen(false);
-        setCurrentPost(null);
+        }).then(data => {
+            setIsModalOpen(false);
+            setCurrentPost(null);
+        })
     };
 
     const handleClickDelete = (id) => {
@@ -53,16 +56,16 @@ export default function Posts() {
         setPosts(posts.filter(post => post.id !== id));
     };
 
-
     const closeModal = () => {
         setIsModalOpen(false);
     };
 
     return (
-        <Layout>
-            <list.List>
-                {posts.map(post => (
-                    <Card key={`${post.id}-${post.title} `} title={post.title}>
+        <Provider store={store}>
+            <Layout>
+                <list.List>
+                    {posts.map(post => (
+                        <Card key={`${post.id}-${post.title} `} title={post.title} isLink={true}>
                             <list.BtnWrapper>
                                 <list.Button type="button" onClick={() => handleClickEdit(post.id)}>
                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -101,15 +104,16 @@ export default function Posts() {
                                 </list.Button>
                             </list.BtnWrapper>
                             <list.PostBody>{post.body}</list.PostBody>
-                    </Card>
-                ))}
-            </list.List>
+                        </Card>
+                    ))}
+                </list.List>
 
-            {isModalOpen &&
+                {isModalOpen &&
                 <Modal onClose={closeModal} title={currentPost.title}>
                   <Form onSubmitForm={editPost} currentPost={currentPost}/>
                 </Modal>
-            }
-        </Layout>
+                }
+            </Layout>
+        </Provider>
     );
 }

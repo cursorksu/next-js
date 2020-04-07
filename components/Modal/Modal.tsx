@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { modal } from './ModalStyles';
+import { Backdrop, BtnClose, Content } from './ModalStyles';
 import { Card } from '../Card';
 
 interface Props {
@@ -11,12 +11,12 @@ interface Props {
 export const Modal:FC<Props> = ({ title, onClose, children }) => {
     const handleClose = () => {
         onClose();
-    }
+    };
 
     return (
-        <modal.Backdrop>
-            <Card title={title}>
-                <modal.BtnClose type="button" onClick={handleClose}>
+        <Backdrop>
+            <Card title={title} isLink={false}>
+                <BtnClose type="button" onClick={handleClose}>
                     <svg version="1.1" id="Layer_1"  x="0px" y="0px"
                          viewBox="0 0 492 492"
                     >
@@ -28,11 +28,11 @@ export const Modal:FC<Props> = ({ title, onClose, children }) => {
                             c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
                             c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
                     </svg>
-                </modal.BtnClose>
-                <modal.Content>
+                </BtnClose>
+                <Content>
                     { children }
-                </modal.Content>
+                </Content>
             </Card>
-        </modal.Backdrop>
+        </Backdrop>
     );
-}
+};

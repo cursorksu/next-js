@@ -1,35 +1,30 @@
 import React from 'react';
 import { useRouter } from "next/router";
 import Link from 'next/link';
-import { s } from './HeaderStyles';
+import { Nav, NavList, NavItem, NavLink } from './HeaderStyles';
 
 export const Header = () => {
     const router = useRouter();
 
     return (
-        <s.Nav>
-            <s.NavList>
-                <s.NavItem className={router.pathname === "/" ? "active" : ""}>
+        <Nav>
+            <NavList>
+                <NavItem className={router.pathname === "/" ? "active" : ""}>
                     <Link href="/">
-                        <s.NavLink title="Home">Home</s.NavLink>
+                        <NavLink title="Home">Home</NavLink>
                     </Link>
-                </s.NavItem>
-                <s.NavItem className={router.pathname.includes('/posts') ? "active" : ""}>
+                </NavItem>
+                <NavItem className={router.pathname.includes('/posts') ? "active" : ""}>
                     <Link href="/posts">
-                        <s.NavLink title="List of posts">List of posts</s.NavLink>
+                        <NavLink title="List of posts">List of posts</NavLink>
                     </Link>
-                </s.NavItem>
-                <s.NavItem className={router.pathname.includes('/post') ? "active" : ""}>
-                    <Link href="/post">
-                        <s.NavLink title="Post">Post</s.NavLink>
-                    </Link>
-                </s.NavItem>
-                <s.NavItem  className={router.pathname === "/new" ? "active" : ""}>
+                </NavItem>
+                <NavItem  className={router.pathname === "/new" ? "active" : ""}>
                     <Link href="/new">
-                        <s.NavLink title="New post">New post</s.NavLink>
+                        <NavLink title="New post">New post</NavLink>
                     </Link>
-                </s.NavItem>
-            </s.NavList>
-        </s.Nav>
+                </NavItem>
+            </NavList>
+        </Nav>
     );
 }
