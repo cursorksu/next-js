@@ -1,22 +1,15 @@
-// / <reference types="next" />
-// / <reference types="next/types/global" />
-
-import { Action } from 'react-redux';
+// <reference types="next" />
+// <reference types="next/types/global" />
 
 interface Post {
-  id: string|number;
+  id: number | string;
   title: string;
   body: string;
+  comments?: Comment[] | [];
 }
 
-
-interface PostsState {
-  posts: [],
-  isLoading: false,
-  isLoaded: false,
-  modal: false,
-}
-
-interface PostsAction extends Action {
-  type: string;
+interface Comment {
+  id: number | string;
+  postId: number;
+  body: string;
 }

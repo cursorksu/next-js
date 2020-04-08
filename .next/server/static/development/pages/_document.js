@@ -1084,22 +1084,22 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12,
-        columnNumber: 13
+        lineNumber: 13,
+        columnNumber: 7
       }
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13,
-        columnNumber: 15
+        lineNumber: 14,
+        columnNumber: 9
       }
     }, __jsx("title", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14,
-        columnNumber: 19
+        lineNumber: 15,
+        columnNumber: 11
       }
     }, "My list of posts with Next.js"), __jsx("meta", {
       name: "viewport",
@@ -1107,8 +1107,8 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15,
-        columnNumber: 19
+        lineNumber: 16,
+        columnNumber: 11
       }
     }), __jsx("link", {
       href: "https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Raleway:wght@300&display=swap",
@@ -1116,35 +1116,34 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16,
-        columnNumber: 19
+        lineNumber: 17,
+        columnNumber: 11
       }
     })), __jsx("body", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
-        columnNumber: 15
+        lineNumber: 22,
+        columnNumber: 9
       }
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22,
-        columnNumber: 17
+        lineNumber: 23,
+        columnNumber: 11
       }
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23,
-        columnNumber: 17
+        lineNumber: 24,
+        columnNumber: 11
       }
     })));
   }
 
-} // @ts-ignore
-
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (CustomDocument);
 

@@ -1,0 +1,1 @@
+{"ast":null,"code":"","map":{"version":3,"sources":[],"names":[],"mappings":"","sourcesContent":["\r\nexport interface Post {\r\n    id: string|number;\r\n    title: string;\r\n    body: string;\r\n    comments?: string[];\r\n}\r\n"]},"metadata":{},"sourceType":"script"}
