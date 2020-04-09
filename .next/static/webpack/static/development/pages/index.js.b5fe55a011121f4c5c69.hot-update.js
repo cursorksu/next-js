@@ -63,8 +63,8 @@ var Card = function Card(_ref) {
       columnNumber: 23
     }
   }, heading), title && __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/post/[id]",
-    as: "/post/".concat(id),
+    href: "/posts/[id]",
+    as: "/posts/".concat(id),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -72,7 +72,7 @@ var Card = function Card(_ref) {
       columnNumber: 13
     }
   }, __jsx("a", {
-    href: "/post",
+    href: "/posts",
     __self: _this,
     __source: {
       fileName: _jsxFileName,

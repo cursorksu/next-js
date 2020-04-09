@@ -1,8 +1,8 @@
-webpackHotUpdate("static\\development\\pages\\post\\[id].js",{
+webpackHotUpdate("static\\development\\pages\\posts\\[id].js",{
 
 /***/ "./pages/post/[id].tsx":
 /*!*****************************!*\
-  !*** ./pages/post/[id].tsx ***!
+  !*** ./pages/posts/[id].tsx ***!
   \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "F:\\TestTasks\\next-js\\pages\\post\\[id].tsx";
+    _jsxFileName = "F:\\TestTasks\\next-js\\pages\\posts\\[id].tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 

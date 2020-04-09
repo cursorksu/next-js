@@ -1,4 +1,4 @@
-webpackHotUpdate("static\\development\\pages\\post\\[id].js",{
+webpackHotUpdate("static\\development\\pages\\posts\\[id].js",{
 
 /***/ "./components/Card/CardStyles.ts":
 /*!***************************************!*\

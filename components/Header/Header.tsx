@@ -14,8 +14,8 @@ export const Header: FC = () => {
             <NavLink title="List of posts">List of posts</NavLink>
           </Link>
         </NavItem>
-        <NavItem className={router.pathname === '/new' ? 'active' : ''}>
-          <Link href="/new">
+        <NavItem className={router.pathname === '/posts/new' ? 'active' : ''}>
+          <Link href="/posts/new">
             <NavLink title="New post">New post</NavLink>
           </Link>
         </NavItem>

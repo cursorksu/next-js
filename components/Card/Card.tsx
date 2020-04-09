@@ -15,8 +15,8 @@ export const Card: FC<Props> = ({ heading, title, id, children }) => (
         <Title>
           {heading && <span>{heading}</span>}
           {title && (
-            <Link href="/post/[id]" as={`/post/${id}`}>
-              <a href="/post">{`${title}`}</a>
+            <Link href="/posts/[id]" as={`/posts/${id}`}>
+              <a href="/posts">{`${title}`}</a>
             </Link>
           )}
         </Title>

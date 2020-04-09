@@ -17,7 +17,7 @@ export const Form: FC<Props> = ({ onSubmitForm, currentPost }) => {
     e.preventDefault();
 
     if (!post.title || !post.body) {
-      setError('Why do you want to send an empty post? Write something!');
+      setError('Why do you want to send an empty posts? Write something!');
 
       return;
     }
@@ -73,7 +73,7 @@ export const Form: FC<Props> = ({ onSubmitForm, currentPost }) => {
           onChange={handleBody}
         />
       </Label>
-      <Button type="submit">{currentPost ? 'Edit post' : 'Create post'}</Button>
+      <Button type="submit">{currentPost ? 'Edit posts' : 'Create posts'}</Button>
     </form>
   );
 };

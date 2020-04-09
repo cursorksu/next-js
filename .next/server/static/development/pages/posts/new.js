@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -154,8 +154,8 @@ const Card = ({
     columnNumber: 23
   }
 }, heading), title && __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/post/[id]",
-  as: `/post/${id}`,
+  href: "/posts/[id]",
+  as: `/posts/${id}`,
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -163,7 +163,7 @@ const Card = ({
     columnNumber: 13
   }
 }, __jsx("a", {
-  href: "/post",
+  href: "/posts",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -221,6 +221,227 @@ const Title = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h2.withCo
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Card */ "./components/Card/Card.tsx");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Card", function() { return _Card__WEBPACK_IMPORTED_MODULE_0__["Card"]; });
+
+
+
+/***/ }),
+
+/***/ "./components/Form/Form.tsx":
+/*!**********************************!*\
+  !*** ./components/Form/Form.tsx ***!
+  \**********************************/
+/*! exports provided: Form */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return Form; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid */ "uuid");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _FormStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormStyles */ "./components/Form/FormStyles.ts");
+var _jsxFileName = "F:\\TestTasks\\next-js\\components\\Form\\Form.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+const Form = ({
+  onSubmitForm,
+  currentPost
+}) => {
+  const {
+    0: post,
+    1: setPost
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(currentPost || {
+    id: '',
+    title: '',
+    body: ''
+  });
+  const {
+    0: error,
+    1: setError
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+
+  const handleSubmitCreate = e => {
+    e.preventDefault();
+
+    if (!post.title || !post.body) {
+      setError('Why do you want to send an empty posts? Write something!');
+      return;
+    }
+
+    const preparedPost = _objectSpread({}, post, {
+      title: post.title.trim(),
+      body: post.body.trim()
+    });
+
+    onSubmitForm(preparedPost);
+    setPost({
+      id: '',
+      title: '',
+      body: ''
+    });
+  };
+
+  const handleTitle = event => {
+    const id = Object(uuid__WEBPACK_IMPORTED_MODULE_1__["v4"])().substring(0, 6);
+    setError('');
+    setPost(_objectSpread({}, post, {
+      id,
+      title: event.target.value
+    }));
+  };
+
+  const handleBody = event => {
+    setError('');
+    setPost(_objectSpread({}, post, {
+      body: event.target.value
+    }));
+  };
+
+  return __jsx("form", {
+    action: "#",
+    onSubmit: handleSubmitCreate,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 5
+    }
+  }, error && __jsx(_FormStyles__WEBPACK_IMPORTED_MODULE_2__["ErrorMess"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 17
+    }
+  }, error), __jsx(_FormStyles__WEBPACK_IMPORTED_MODULE_2__["Label"], {
+    htmlFor: "title",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 7
+    }
+  }, __jsx("p", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 9
+    }
+  }, "Post`s title"), __jsx(_FormStyles__WEBPACK_IMPORTED_MODULE_2__["Input"], {
+    placeholder: "Input Title of Post",
+    id: "title",
+    type: "text",
+    value: post.title,
+    onChange: handleTitle,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 9
+    }
+  })), __jsx(_FormStyles__WEBPACK_IMPORTED_MODULE_2__["Label"], {
+    htmlFor: "body",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 7
+    }
+  }, __jsx("p", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 9
+    }
+  }, "Post`s text"), __jsx(_FormStyles__WEBPACK_IMPORTED_MODULE_2__["Textarea"], {
+    placeholder: "Input Body of Post",
+    id: "body",
+    value: post.body,
+    onChange: handleBody,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 9
+    }
+  })), __jsx(_FormStyles__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+    type: "submit",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76,
+      columnNumber: 7
+    }
+  }, currentPost ? 'Edit posts' : 'Create posts'));
+};
+
+/***/ }),
+
+/***/ "./components/Form/FormStyles.ts":
+/*!***************************************!*\
+  !*** ./components/Form/FormStyles.ts ***!
+  \***************************************/
+/*! exports provided: Input, Textarea, Label, Button, ErrorMess */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return Input; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Textarea", function() { return Textarea; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Label", function() { return Label; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return Button; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ErrorMess", function() { return ErrorMess; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Card_CardStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Card/CardStyles */ "./components/Card/CardStyles.ts");
+
+
+const Input = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.input.withConfig({
+  displayName: "FormStyles__Input",
+  componentId: "sc-2t346z-0"
+})(["box-sizing:border-box;width:100%;display:block;line-height:40px;border:none;background:transparent;font-size:14px;padding:0 12px;font-family:'Raleway',sans-serif;color:rgba (0,0,0,0.4);border-bottom:2px solid #f3969a;&:placeholder-shown{font-family:'Raleway',sans-serif;color:rgba (0,0,0,0.4);}&:focus{outline:none;}"]);
+const Textarea = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.textarea.withConfig({
+  displayName: "FormStyles__Textarea",
+  componentId: "sc-2t346z-1"
+})(["box-sizing:border-box;width:100%;height:150px;display:block;line-height:1.2;background:transparent;font-size:14px;padding:12px;font-family:'Raleway',sans-serif;color:rgba (0,0,0,0.4);border:2px solid #f3969a;&:placeholder-shown{font-family:'Raleway',sans-serif;color:rgba (0,0,0,0.4);}&:focus{outline:none;}"]);
+const Label = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.label.withConfig({
+  displayName: "FormStyles__Label",
+  componentId: "sc-2t346z-2"
+})(["font-family:'Comfortaa',sans-serif;display:block;box-sizing:border-box;margin-bottom:20px;"]);
+const Button = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
+  displayName: "FormStyles__Button",
+  componentId: "sc-2t346z-3"
+})(["border:2px solid #f3969a;box-sizing:border-box;width:100%;display:block;line-height:40px;background:#f3969a;color:#fff;font-family:'Comfortaa',sans-serif;text-transform:uppercase;transition:background-color 0.3s ease-in-out;&:hover{background:rgba(243,150,154,0.8);}"]);
+const ErrorMess = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(_Card_CardStyles__WEBPACK_IMPORTED_MODULE_1__["Title"]).withConfig({
+  displayName: "FormStyles__ErrorMess",
+  componentId: "sc-2t346z-4"
+})(["font-size:14px;"]);
+
+/***/ }),
+
+/***/ "./components/Form/index.ts":
+/*!**********************************!*\
+  !*** ./components/Form/index.ts ***!
+  \**********************************/
+/*! exports provided: Form */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Form */ "./components/Form/Form.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return _Form__WEBPACK_IMPORTED_MODULE_0__["Form"]; });
 
 
 
@@ -290,7 +511,7 @@ const Header = () => {
       columnNumber: 13
     }
   }, "List of posts"))), __jsx(_HeaderStyles__WEBPACK_IMPORTED_MODULE_3__["NavItem"], {
-    className: router.pathname === '/new' ? 'active' : '',
+    className: router.pathname === '/posts/new' ? 'active' : '',
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -298,7 +519,7 @@ const Header = () => {
       columnNumber: 9
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/new",
+    href: "/posts/new",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -441,6 +662,141 @@ const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.wit
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Layout */ "./components/Layout/Layout.tsx");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Layout", function() { return _Layout__WEBPACK_IMPORTED_MODULE_0__["Layout"]; });
+
+
+
+/***/ }),
+
+/***/ "./components/Modal/Modal.tsx":
+/*!************************************!*\
+  !*** ./components/Modal/Modal.tsx ***!
+  \************************************/
+/*! exports provided: Modal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return Modal; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ModalStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ModalStyles */ "./components/Modal/ModalStyles.ts");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Card */ "./components/Card/index.ts");
+var _jsxFileName = "F:\\TestTasks\\next-js\\components\\Modal\\Modal.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const Modal = ({
+  title,
+  onClose,
+  children
+}) => {
+  const handleClose = () => {
+    onClose();
+  };
+
+  return __jsx(_ModalStyles__WEBPACK_IMPORTED_MODULE_1__["Backdrop"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 5
+    }
+  }, __jsx(_Card__WEBPACK_IMPORTED_MODULE_2__["Card"], {
+    heading: title,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 7
+    }
+  }, __jsx(_ModalStyles__WEBPACK_IMPORTED_MODULE_1__["BtnClose"], {
+    type: "button",
+    onClick: handleClose,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, __jsx("svg", {
+    version: "1.1",
+    id: "Layer_1",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 492 492",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 11
+    }
+  }, __jsx("path", {
+    d: "M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872 c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872 c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052 L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116 c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952 c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116 c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }))), __jsx(_ModalStyles__WEBPACK_IMPORTED_MODULE_1__["Content"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 9
+    }
+  }, children)));
+};
+
+/***/ }),
+
+/***/ "./components/Modal/ModalStyles.ts":
+/*!*****************************************!*\
+  !*** ./components/Modal/ModalStyles.ts ***!
+  \*****************************************/
+/*! exports provided: Backdrop, Wrapper, BtnClose, Content */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Backdrop", function() { return Backdrop; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Wrapper", function() { return Wrapper; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BtnClose", function() { return BtnClose; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Content", function() { return Content; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Backdrop = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "ModalStyles__Backdrop",
+  componentId: "qw3am3-0"
+})(["position:fixed;left:0;right:0;top:0;bottom:0;z-index:999;background-color:rgba(243,150,154,0.3);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;"]);
+const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "ModalStyles__Wrapper",
+  componentId: "qw3am3-1"
+})(["min-width:400px;padding-top:16px;position:relative;background:#f3969a;@media (max-width:600px){min-width:100%;}"]);
+const BtnClose = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
+  displayName: "ModalStyles__BtnClose",
+  componentId: "qw3am3-2"
+})(["position:absolute;top:20px;right:20px;background-color:$main-light;border-radius:50%;border:2px solid #f3969a;padding:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center;transition:background-color 0.3s ease-in-out;& svg{transition:fill 0.3s ease-in-out;fill:#f3969a;width:22px;height:22px;}&:hover{background:#f3969a;& svg{fill:#fff;width:22px;height:22px;}}"]);
+const Content = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "ModalStyles__Content",
+  componentId: "qw3am3-3"
+})(["padding:0;"]);
+
+/***/ }),
+
+/***/ "./components/Modal/index.ts":
+/*!***********************************!*\
+  !*** ./components/Modal/index.ts ***!
+  \***********************************/
+/*! exports provided: Modal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Modal */ "./components/Modal/Modal.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return _Modal__WEBPACK_IMPORTED_MODULE_0__["Modal"]; });
 
 
 
@@ -2121,9 +2477,9 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/post/[id].tsx":
+/***/ "./pages/posts/new.tsx":
 /*!*****************************!*\
-  !*** ./pages/post/[id].tsx ***!
+  !*** ./pages/posts/new.tsx ***!
   \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2134,10 +2490,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Layout */ "./components/Layout/index.ts");
-/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Card */ "./components/Card/index.ts");
-/* harmony import */ var _components_Card_CardStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Card/CardStyles */ "./components/Card/CardStyles.ts");
-var _jsxFileName = "F:\\TestTasks\\next-js\\pages\\post\\[id].tsx";
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Modal */ "./components/Modal/index.ts");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Layout */ "./components/Layout/index.ts");
+/* harmony import */ var _components_Form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Form */ "./components/Form/index.ts");
+/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Card */ "./components/Card/index.ts");
+var _jsxFileName = "F:\\TestTasks\\next-js\\pages\\posts\\new.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2145,79 +2504,103 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Post = ({
-  post
-}) => {
-  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["Layout"], {
+
+const BASE_URL = 'https://simple-blog-api.crew.red/posts';
+
+const New = () => {
+  const {
+    0: isModalOpen,
+    1: setIsModalOpen
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: currentTitle,
+    1: setCurrentTitle
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
+
+  const setNewPost = async post => {
+    setCurrentTitle(post.title);
+    setIsModalOpen(true);
+    await axios__WEBPACK_IMPORTED_MODULE_1___default()({
+      method: 'post',
+      url: `${BASE_URL}`,
+      data: post
+    });
+  };
+
+  const closeModal = async () => {
+    await router.push('/');
+    setIsModalOpen(false);
+    setCurrentTitle('');
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/explicit-function-return-type
+    function handleRemoveClick() {
+      document.removeEventListener('click', closeModal);
+    }
+  }, []);
+  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_4__["Layout"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 40,
       columnNumber: 5
     }
-  }, __jsx(_components_Card__WEBPACK_IMPORTED_MODULE_3__["Card"], {
-    heading: post.title,
+  }, __jsx(_components_Card__WEBPACK_IMPORTED_MODULE_6__["Card"], {
+    heading: "Create new post now!",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 41,
       columnNumber: 7
     }
-  }, __jsx("div", {
+  }, __jsx(_components_Form__WEBPACK_IMPORTED_MODULE_5__["Form"], {
+    onSubmitForm: setNewPost,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 42,
       columnNumber: 9
     }
-  }, post.body), post.comments.length > 0 && __jsx(_components_Card_CardStyles__WEBPACK_IMPORTED_MODULE_4__["Title"], {
+  })), isModalOpen && __jsx(_components_Modal__WEBPACK_IMPORTED_MODULE_3__["Modal"], {
+    onClose: closeModal,
+    title: currentTitle,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 38
-    }
-  }, "Comments"), __jsx("ul", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 45,
       columnNumber: 9
     }
-  }, post.comments.map(item => __jsx("li", {
-    key: item.id,
+  }, __jsx("p", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
+      lineNumber: 46,
+      columnNumber: 11
     }
-  }, item.body)))));
+  }, "Success!!!"), __jsx("p", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 11
+    }
+  }, "The post was successfully added!")));
 };
 
-Post.getInitialProps = async context => {
-  const {
-    id
-  } = context.query;
-  const postWithComments = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(`https://simple-blog-api.crew.red/posts/${id}?_embed=comments`);
-  const post = postWithComments.data;
-  return {
-    post
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Post);
+/* harmony default export */ __webpack_exports__["default"] = (New);
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!***********************************!*\
-  !*** multi ./pages/post/[id].tsx ***!
+  !*** multi ./pages/posts/new.tsx ***!
   \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\TestTasks\next-js\pages\post\[id].tsx */"./pages/post/[id].tsx");
+module.exports = __webpack_require__(/*! F:\TestTasks\next-js\pages\posts\new.tsx */"./pages/posts/new.tsx");
 
 
 /***/ }),
@@ -2308,7 +2691,18 @@ module.exports = require("styled-components");
 
 module.exports = require("url");
 
+/***/ }),
+
+/***/ "uuid":
+/*!***********************!*\
+  !*** external "uuid" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("uuid");
+
 /***/ })
 
 /******/ });
-//# sourceMappingURL=[id].js.map
+//# sourceMappingURL=new.js.map

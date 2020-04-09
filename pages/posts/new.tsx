@@ -1,10 +1,10 @@
 import React, { FC, useState, useEffect } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import { Modal } from '../components/Modal';
-import { Layout } from '../components/Layout';
-import { Form } from '../components/Form';
-import { Card } from '../components/Card';
+import { Modal } from '../../components/Modal';
+import { Layout } from '../../components/Layout';
+import { Form } from '../../components/Form';
+import { Card } from '../../components/Card';
 
 const BASE_URL = 'https://simple-blog-api.crew.red/posts';
 

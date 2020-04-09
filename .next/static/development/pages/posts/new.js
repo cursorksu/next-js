@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\new.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\posts\\new.js"],{
 
 /***/ "./components/Card/Card.tsx":
 /*!**********************************!*\
@@ -63,8 +63,8 @@ var Card = function Card(_ref) {
       columnNumber: 23
     }
   }, heading), title && __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/post/[id]",
-    as: "/post/".concat(id),
+    href: "/posts/[id]",
+    as: "/posts/".concat(id),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -72,7 +72,7 @@ var Card = function Card(_ref) {
       columnNumber: 13
     }
   }, __jsx("a", {
-    href: "/post",
+    href: "/posts",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -184,7 +184,7 @@ var Form = function Form(_ref) {
     e.preventDefault();
 
     if (!post.title || !post.body) {
-      setError('Why do you want to send an empty post? Write something!');
+      setError('Why do you want to send an empty posts? Write something!');
       return;
     }
 
@@ -294,7 +294,7 @@ var Form = function Form(_ref) {
       lineNumber: 76,
       columnNumber: 7
     }
-  }, currentPost ? 'Edit post' : 'Create post'));
+  }, currentPost ? 'Edit posts' : 'Create posts'));
 };
 
 /***/ }),
@@ -422,7 +422,7 @@ var Header = function Header() {
       columnNumber: 13
     }
   }, "List of posts"))), __jsx(_HeaderStyles__WEBPACK_IMPORTED_MODULE_3__["NavItem"], {
-    className: router.pathname === '/new' ? 'active' : '',
+    className: router.pathname === '/posts/new' ? 'active' : '',
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -430,7 +430,7 @@ var Header = function Header() {
       columnNumber: 9
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/new",
+    href: "/posts/new",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -3952,21 +3952,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnew&absolutePagePath=F%3A%5CTestTasks%5Cnext-js%5Cpages%5Cnew.tsx!./":
-/*!************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnew&absolutePagePath=F%3A%5CTestTasks%5Cnext-js%5Cpages%5Cnew.tsx ***!
-  \************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fposts%2Fnew&absolutePagePath=F%3A%5CTestTasks%5Cnext-js%5Cpages%5Cposts%5Cnew.tsx!./":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fposts%2Fnew&absolutePagePath=F%3A%5CTestTasks%5Cnext-js%5Cpages%5Cposts%5Cnew.tsx ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/new", function() {
-      var mod = __webpack_require__(/*! ./pages/new.tsx */ "./pages/new.tsx")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/posts/new", function() {
+      var mod = __webpack_require__(/*! ./pages/posts/new.tsx */ "./pages/posts/new.tsx")
       if(true) {
-        module.hot.accept(/*! ./pages/new.tsx */ "./pages/new.tsx", function() {
-          if(!next.router.components["/new"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/new.tsx */ "./pages/new.tsx")
-          next.router.update("/new", updatedPage)
+        module.hot.accept(/*! ./pages/posts/new.tsx */ "./pages/posts/new.tsx", function() {
+          if(!next.router.components["/posts/new"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/posts/new.tsx */ "./pages/posts/new.tsx")
+          next.router.update("/posts/new", updatedPage)
         })
       }
       return mod
@@ -10577,10 +10577,10 @@ var v5 = Object(_v35_js__WEBPACK_IMPORTED_MODULE_0__["default"])('v5', 0x50, _sh
 
 /***/ }),
 
-/***/ "./pages/new.tsx":
-/*!***********************!*\
-  !*** ./pages/new.tsx ***!
-  \***********************/
+/***/ "./pages/posts/new.tsx":
+/*!*****************************!*\
+  !*** ./pages/posts/new.tsx ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10594,14 +10594,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Modal */ "./components/Modal/index.ts");
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout/index.ts");
-/* harmony import */ var _components_Form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Form */ "./components/Form/index.ts");
-/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Card */ "./components/Card/index.ts");
+/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Modal */ "./components/Modal/index.ts");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Layout */ "./components/Layout/index.ts");
+/* harmony import */ var _components_Form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Form */ "./components/Form/index.ts");
+/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Card */ "./components/Card/index.ts");
 
 
 var _this = undefined,
-    _jsxFileName = "F:\\TestTasks\\next-js\\pages\\new.tsx";
+    _jsxFileName = "F:\\TestTasks\\next-js\\pages\\posts\\new.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -10726,13 +10726,13 @@ var New = function New() {
 /***/ }),
 
 /***/ 3:
-/*!****************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fnew&absolutePagePath=F%3A%5CTestTasks%5Cnext-js%5Cpages%5Cnew.tsx ***!
-  \****************************************************************************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fposts%2Fnew&absolutePagePath=F%3A%5CTestTasks%5Cnext-js%5Cpages%5Cposts%5Cnew.tsx ***!
+  \********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fnew&absolutePagePath=F%3A%5CTestTasks%5Cnext-js%5Cpages%5Cnew.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnew&absolutePagePath=F%3A%5CTestTasks%5Cnext-js%5Cpages%5Cnew.tsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fposts%2Fnew&absolutePagePath=F%3A%5CTestTasks%5Cnext-js%5Cpages%5Cposts%5Cnew.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fposts%2Fnew&absolutePagePath=F%3A%5CTestTasks%5Cnext-js%5Cpages%5Cposts%5Cnew.tsx!./");
 
 
 /***/ }),
