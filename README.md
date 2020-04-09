@@ -1,6 +1,6 @@
 # Test [DevelopsToday](https://www.notion.so/Front-End-React-test-assessment-by-DevelopsToday-ed99f6bce4de41bd940d2dcf98abc01a)
 
-  [DEMO LINK](https://cursorksu.github.io/next-js/)
+  [DEMO LINK](https://next-js-hrv7mk4k3.now.sh/)
 
 ## Deploy locale project
     1. npm i

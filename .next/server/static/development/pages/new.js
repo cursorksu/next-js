@@ -88,162 +88,10 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./components/Buttons/ButtonStyles.ts":
-/*!********************************************!*\
-  !*** ./components/Buttons/ButtonStyles.ts ***!
-  \********************************************/
-/*! exports provided: Button */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return Button; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const Shake = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["10%,90%{transform:translate3d(-1px,0,0);}20%,80%{transform:translate3d(2px,0,0);}30%,50%,70%{transform:translate3d(-4px,0,0);}40%,60%{transform:translate3d(4px,0,0);}"]);
-const Button = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
-  displayName: "ButtonStyles__Button",
-  componentId: "sc-1lm099i-0"
-})(["border-radius:50%;border:none;background:#f3969a;width:40px;height:40px;display:flex;align-items:center;justify-content:center;margin-right:10px;& svg{fill:#fff;width:22px;height:22px;}&:hover{animation:", " 0.82s cubic-bezier(0.36,0.07,0.19,0.97) both;transform:translate3d(0,0,0);}"], Shake);
-
-/***/ }),
-
-/***/ "./components/Buttons/Buttons.tsx":
-/*!****************************************!*\
-  !*** ./components/Buttons/Buttons.tsx ***!
-  \****************************************/
-/*! exports provided: Buttons */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Buttons", function() { return Buttons; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Card_CardStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Card/CardStyles */ "./components/Card/CardStyles.ts");
-/* harmony import */ var _ButtonStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ButtonStyles */ "./components/Buttons/ButtonStyles.ts");
-var _jsxFileName = "F:\\TestTasks\\next-js\\components\\Buttons\\Buttons.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-const Buttons = ({
-  onEdit,
-  onDelete
-}) => __jsx(_Card_CardStyles__WEBPACK_IMPORTED_MODULE_1__["BtnWrapper"], {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11,
-    columnNumber: 3
-  }
-}, __jsx(_ButtonStyles__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-  type: "button",
-  onClick: onEdit,
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12,
-    columnNumber: 5
-  }
-}, __jsx("svg", {
-  version: "1.1",
-  id: "Layer_1",
-  xmlns: "http://www.w3.org/2000/svg",
-  x: "0px",
-  y: "0px",
-  viewBox: "0 0 469.336 469.336",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13,
-    columnNumber: 7
-  }
-}, __jsx("path", {
-  d: "M456.836,76.168l-64-64.054c-16.125-16.139-44.177-16.17-60.365,0.031L45.763,301.682 c-1.271,1.282-2.188,2.857-2.688,4.587L0.409,455.73c-1.063,3.722-0.021,7.736,2.719,10.478c2.031,2.033,4.75,3.128,7.542,3.128 c0.979,0,1.969-0.136,2.927-0.407l149.333-42.703c1.729-0.5,3.302-1.418,4.583-2.69l289.323-286.983 c8.063-8.069,12.5-18.787,12.5-30.192S464.899,84.237,456.836,76.168z M285.989,89.737l39.264,39.264L120.257,333.998 l-14.712-29.434c-1.813-3.615-5.5-5.896-9.542-5.896H78.921L285.989,89.737z M26.201,443.137L40.095,394.5l34.742,34.742 L26.201,443.137z M149.336,407.96l-51.035,14.579l-51.503-51.503l14.579-51.035h28.031l18.385,36.771 c1.031,2.063,2.708,3.74,4.771,4.771l36.771,18.385V407.96z M170.67,390.417v-17.082c0-4.042-2.281-7.729-5.896-9.542 l-29.434-14.712l204.996-204.996l39.264,39.264L170.67,390.417z M441.784,121.72l-47.033,46.613l-93.747-93.747l46.582-47.001 c8.063-8.063,22.104-8.063,30.167,0l64,64c4.031,4.031,6.25,9.385,6.25,15.083S445.784,117.72,441.784,121.72z",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 21,
-    columnNumber: 9
-  }
-}))), __jsx(_ButtonStyles__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-  type: "button",
-  onClick: onDelete,
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 34,
-    columnNumber: 5
-  }
-}, __jsx("svg", {
-  version: "1.1",
-  id: "Capa_1",
-  xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "0 0 512 512",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 35,
-    columnNumber: 7
-  }
-}, __jsx("path", {
-  d: "M472,83H351V60c0-33.084-26.916-60-60-60h-70c-33.084,0-60,26.916-60,60v23H40c-11.046,0-20,8.954-20,20s8.954,20,20,20 h20.712l24.374,315.987c0.007,0.092,0.015,0.185,0.023,0.278c1.816,19.924,10.954,38.326,25.73,51.816 C125.615,504.571,144.771,512,164.778,512h182.444c41.667,0,75.917-31.032,79.669-72.183 c1.003-11.001-7.101-20.731-18.101-21.734c-11.011-1.003-20.731,7.101-21.734,18.101C385.195,456.603,368.07,472,347.222,472 H164.778c-20.777,0-37.875-15.571-39.823-36.242L100.831,123h310.338l-17.082,221.462c-0.849,11.013,7.39,20.629,18.403,21.479 c0.524,0.04,1.043,0.06,1.56,0.06c10.347,0,19.11-7.974,19.919-18.463L451.288,123H472c11.046,0,20-8.954,20-20 S483.046,83,472,83z M311,83H201V60c0-11.028,8.972-20,20-20h70c11.028,0,20,8.972,20,20V83z",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 41,
-    columnNumber: 9
-  }
-}), __jsx("path", {
-  d: "M165.127,163.019c-11.035,0.482-19.59,9.818-19.108,20.854l10,228.933c0.469,10.738,9.322,19.128,19.966,19.128 c0.294,0,0.591-0.006,0.888-0.02c11.035-0.482,19.59-9.818,19.108-20.854l-10-228.934 C185.499,171.092,176.145,162.523,165.127,163.019z",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 50,
-    columnNumber: 9
-  }
-}), __jsx("path", {
-  d: "M326.019,182.127l-10,228.934c-0.482,11.035,8.073,20.372,19.108,20.854c0.297,0.013,0.593,0.02,0.888,0.02 c10.643,0,19.497-8.39,19.966-19.128l10-228.933c0.482-11.035-8.073-20.372-19.108-20.854 C335.856,162.527,326.501,171.092,326.019,182.127z",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 55,
-    columnNumber: 9
-  }
-}), __jsx("path", {
-  d: "M236,183v228.933c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V183c0-11.046-8.954-20-20-20S236,171.954,236,183z",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 60,
-    columnNumber: 9
-  }
-}))));
-
-/***/ }),
-
-/***/ "./components/Buttons/index.ts":
-/*!*************************************!*\
-  !*** ./components/Buttons/index.ts ***!
-  \*************************************/
-/*! exports provided: Buttons */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Buttons */ "./components/Buttons/Buttons.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Buttons", function() { return _Buttons__WEBPACK_IMPORTED_MODULE_0__["Buttons"]; });
-
-
-
-/***/ }),
 
 /***/ "./components/Card/Card.tsx":
 /*!**********************************!*\
@@ -949,193 +797,6 @@ const Content = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.wit
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Modal */ "./components/Modal/Modal.tsx");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return _Modal__WEBPACK_IMPORTED_MODULE_0__["Modal"]; });
-
-
-
-/***/ }),
-
-/***/ "./components/PostList/PostList.tsx":
-/*!******************************************!*\
-  !*** ./components/PostList/PostList.tsx ***!
-  \******************************************/
-/*! exports provided: PostList */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostList", function() { return PostList; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _PostListStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PostListStyles */ "./components/PostList/PostListStyles.ts");
-/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Card */ "./components/Card/index.ts");
-/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Modal */ "./components/Modal/index.ts");
-/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Form */ "./components/Form/index.ts");
-/* harmony import */ var _Buttons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Buttons */ "./components/Buttons/index.ts");
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/constants */ "./utils/constants.ts");
-var _jsxFileName = "F:\\TestTasks\\next-js\\components\\PostList\\PostList.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-
-
-const PostList = ({
-  postList
-}) => {
-  const {
-    0: posts,
-    1: setPosts
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(postList);
-  const {
-    0: isModalOpen,
-    1: setIsModalOpen
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  const {
-    0: currentPost,
-    1: setCurrentPost
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
-
-  const deletePost = async id => {
-    await axios__WEBPACK_IMPORTED_MODULE_1___default.a.delete(`https://simple-blog-api.crew.red/posts/${id}`);
-    await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(_utils_constants__WEBPACK_IMPORTED_MODULE_7__["BASE_URL"]).then(({
-      data
-    }) => {
-      setPosts(data.reverse());
-    });
-  };
-
-  const handleClickDelete = id => {
-    deletePost(id).then(() => {
-      setPosts(posts.filter(post => post.id !== id));
-    });
-  };
-
-  const handleClickEdit = id => {
-    setIsModalOpen(true);
-    setCurrentPost(postList.find(post => post.id === id));
-  };
-
-  const editPost = async post => {
-    await axios__WEBPACK_IMPORTED_MODULE_1___default()({
-      method: 'PUT',
-      url: `${_utils_constants__WEBPACK_IMPORTED_MODULE_7__["BASE_URL"]}/${currentPost.id}`,
-      data: post
-    }).then(() => {
-      setIsModalOpen(false);
-      setCurrentPost(null);
-    });
-    await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(_utils_constants__WEBPACK_IMPORTED_MODULE_7__["BASE_URL"]).then(({
-      data
-    }) => {
-      setPosts(data.reverse());
-    });
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_PostListStyles__WEBPACK_IMPORTED_MODULE_2__["List"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 7
-    }
-  }, posts.map(({
-    id,
-    title,
-    body
-  }) => __jsx(_Card__WEBPACK_IMPORTED_MODULE_3__["Card"], {
-    key: id,
-    title: title,
-    id: id,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62,
-      columnNumber: 11
-    }
-  }, __jsx(_Buttons__WEBPACK_IMPORTED_MODULE_6__["Buttons"], {
-    onEdit: () => handleClickEdit(id),
-    onDelete: () => handleClickDelete(id),
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63,
-      columnNumber: 13
-    }
-  }), __jsx(_PostListStyles__WEBPACK_IMPORTED_MODULE_2__["PostBody"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67,
-      columnNumber: 13
-    }
-  }, body)))), isModalOpen && __jsx(_Modal__WEBPACK_IMPORTED_MODULE_4__["Modal"], {
-    onClose: closeModal,
-    title: currentPost.title,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72,
-      columnNumber: 9
-    }
-  }, __jsx(_Form__WEBPACK_IMPORTED_MODULE_5__["Form"], {
-    onSubmitForm: editPost,
-    currentPost: currentPost,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73,
-      columnNumber: 11
-    }
-  })));
-};
-
-/***/ }),
-
-/***/ "./components/PostList/PostListStyles.ts":
-/*!***********************************************!*\
-  !*** ./components/PostList/PostListStyles.ts ***!
-  \***********************************************/
-/*! exports provided: List, PostBody */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "List", function() { return List; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostBody", function() { return PostBody; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const List = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "PostListStyles__List",
-  componentId: "sc-164ty7t-0"
-})(["box-sizing:border-box;display:flex;justify-content:space-between;flex-wrap:wrap;align-content:space-between;"]);
-const PostBody = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
-  displayName: "PostListStyles__PostBody",
-  componentId: "sc-164ty7t-1"
-})(["white-space:pre-line;font-family:'Raleway',sans-serif;overflow:hidden;text-overflow:ellipsis;"]);
-
-/***/ }),
-
-/***/ "./components/PostList/index.ts":
-/*!**************************************!*\
-  !*** ./components/PostList/index.ts ***!
-  \**************************************/
-/*! exports provided: PostList */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _PostList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PostList */ "./components/PostList/PostList.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PostList", function() { return _PostList__WEBPACK_IMPORTED_MODULE_0__["PostList"]; });
 
 
 
@@ -2816,10 +2477,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/index.tsx":
-/*!*************************!*\
-  !*** ./pages/index.tsx ***!
-  \*************************/
+/***/ "./pages/new.tsx":
+/*!***********************!*\
+  !*** ./pages/new.tsx ***!
+  \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2829,10 +2490,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout/index.ts");
-/* harmony import */ var _components_PostList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/PostList */ "./components/PostList/index.ts");
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/constants */ "./utils/constants.ts");
-var _jsxFileName = "F:\\TestTasks\\next-js\\pages\\index.tsx";
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Modal */ "./components/Modal/index.ts");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout/index.ts");
+/* harmony import */ var _components_Form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Form */ "./components/Form/index.ts");
+/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Card */ "./components/Card/index.ts");
+var _jsxFileName = "F:\\TestTasks\\next-js\\pages\\new.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2840,60 +2504,103 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Index = ({
-  posts
-}) => {
-  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["Layout"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 5
-    }
-  }, __jsx(_components_PostList__WEBPACK_IMPORTED_MODULE_3__["PostList"], {
-    postList: posts,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15,
-      columnNumber: 7
-    }
-  }));
-};
 
-Index.getInitialProps = async function () {
-  const res = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(_utils_constants__WEBPACK_IMPORTED_MODULE_4__["BASE_URL"]);
-  return {
-    posts: res.data.reverse()
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Index);
-
-/***/ }),
-
-/***/ "./utils/constants.ts":
-/*!****************************!*\
-  !*** ./utils/constants.ts ***!
-  \****************************/
-/*! exports provided: BASE_URL */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_URL", function() { return BASE_URL; });
 const BASE_URL = 'https://simple-blog-api.crew.red/posts';
 
+const New = () => {
+  const {
+    0: isModalOpen,
+    1: setIsModalOpen
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: currentTitle,
+    1: setCurrentTitle
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
+
+  const setNewPost = async post => {
+    setCurrentTitle(post.title);
+    setIsModalOpen(true);
+    await axios__WEBPACK_IMPORTED_MODULE_1___default()({
+      method: 'post',
+      url: `${BASE_URL}`,
+      data: post
+    });
+  };
+
+  const closeModal = async () => {
+    await router.push('/');
+    setIsModalOpen(false);
+    setCurrentTitle('');
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/explicit-function-return-type
+    function handleRemoveClick() {
+      document.removeEventListener('click', closeModal);
+    }
+  }, []);
+  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_4__["Layout"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 5
+    }
+  }, __jsx(_components_Card__WEBPACK_IMPORTED_MODULE_6__["Card"], {
+    heading: "Create new post now!",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Form__WEBPACK_IMPORTED_MODULE_5__["Form"], {
+    onSubmitForm: setNewPost,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 9
+    }
+  })), isModalOpen && __jsx(_components_Modal__WEBPACK_IMPORTED_MODULE_3__["Modal"], {
+    onClose: closeModal,
+    title: currentTitle,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 9
+    }
+  }, __jsx("p", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 11
+    }
+  }, "Success!!!"), __jsx("p", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 11
+    }
+  }, "The post was successfully added!")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (New);
+
 /***/ }),
 
-/***/ 3:
-/*!*******************************!*\
-  !*** multi ./pages/index.tsx ***!
-  \*******************************/
+/***/ 5:
+/*!*****************************!*\
+  !*** multi ./pages/new.tsx ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\TestTasks\next-js\pages\index.tsx */"./pages/index.tsx");
+module.exports = __webpack_require__(/*! F:\TestTasks\next-js\pages\new.tsx */"./pages/new.tsx");
 
 
 /***/ }),
@@ -2998,4 +2705,4 @@ module.exports = require("uuid");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=new.js.map
