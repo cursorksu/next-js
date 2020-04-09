@@ -28,6 +28,7 @@ export const Item = styled.div`
   margin-bottom: 20px;
   position: relative;
   box-sizing: border-box;
+  max-height: 230px;
 
   &:hover ${BtnWrapper} {
     -webkit-animation: ${SlideBottom} 0.5s
@@ -120,5 +121,14 @@ export const Title = styled.h2`
     left: 0;
     right: 0;
     z-index: 1;
+  }
+`;
+
+export const PostWrapper = styled.div`
+  width: 100%;
+  & ${Item} {
+    flex-basis: 100%;
+    width: 100%;
+    max-height: initial;
   }
 `;

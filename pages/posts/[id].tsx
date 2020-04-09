@@ -3,7 +3,7 @@ import { NextPageContext } from 'next';
 import axios from 'axios';
 import { Layout } from '../../components/Layout';
 import { Card } from '../../components/Card';
-import { Title } from '../../components/Card/CardStyles';
+import { Title, PostWrapper } from '../../components/Card/CardStyles';
 
 interface Post {
   id: string | number;
@@ -16,25 +16,27 @@ interface Props {
   post: Post;
 }
 
-const Post: FC<Props> & {
+const PostPage: FC<Props> & {
   getInitialProps?(context: NextPageContext): Promise<Props> | Props;
 } = ({ post }) => {
   return (
     <Layout>
-      <Card heading={post.title}>
-        <div>{post.body}</div>
-        {post.comments.length > 0 && <Title>Comments</Title>}
-        <ul>
-          {post.comments.map((item) => (
-            <li key={item.id}>{item.body}</li>
-          ))}
-        </ul>
-      </Card>
+      <PostWrapper>
+        <Card heading={post.title}>
+          <div>{post.body}</div>
+          {post.comments.length > 0 && <Title>Comments</Title>}
+          <ul>
+            {post.comments.map((item) => (
+              <li key={item.id}>{item.body}</li>
+            ))}
+          </ul>
+        </Card>
+      </PostWrapper>
     </Layout>
   );
 };
 
-Post.getInitialProps = async (context): Promise<{ post: Post }> => {
+PostPage.getInitialProps = async (context): Promise<{ post: Post }> => {
   const { id } = context.query;
   const postWithComments = await axios.get(
     `https://simple-blog-api.crew.red/posts/${id}?_embed=comments`,
@@ -46,4 +48,4 @@ Post.getInitialProps = async (context): Promise<{ post: Post }> => {
   };
 };
 
-export default Post;
+export default PostPage;

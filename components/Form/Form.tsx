@@ -73,7 +73,9 @@ export const Form: FC<Props> = ({ onSubmitForm, currentPost }) => {
           onChange={handleBody}
         />
       </Label>
-      <Button type="submit">{currentPost ? 'Edit posts' : 'Create posts'}</Button>
+      <Button type="submit">
+        {currentPost ? 'Edit posts' : 'Create posts'}
+      </Button>
     </form>
   );
 };

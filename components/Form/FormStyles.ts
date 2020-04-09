@@ -12,7 +12,7 @@ export const Input = styled.input`
   padding: 0 12px;
   font-family: 'Raleway', sans-serif;
   color: rgba (0, 0, 0, 0.4);
-  border-bottom: 2px solid #f3969a;
+  border-bottom: 2px solid #ddd;
 
   &:placeholder-shown {
     font-family: 'Raleway', sans-serif;
@@ -21,6 +21,7 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
+    border-bottom: 2px solid #f3969a;
   }
 `;
 
@@ -35,7 +36,7 @@ export const Textarea = styled.textarea`
   padding: 12px;
   font-family: 'Raleway', sans-serif;
   color: rgba (0, 0, 0, 0.4);
-  border: 2px solid #f3969a;
+  border: 2px solid #ccc;
 
   &:placeholder-shown {
     font-family: 'Raleway', sans-serif;
@@ -44,6 +45,7 @@ export const Textarea = styled.textarea`
 
   &:focus {
     outline: none;
+    border: 2px solid #f3969a;
   }
 `;
 

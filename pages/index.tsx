@@ -17,7 +17,7 @@ const Index: NextPage<Props> = ({ posts }) => {
   );
 };
 
-Index.getInitialProps = async function(): Promise<{ posts: Post[] }> {
+Index.getInitialProps = async function (): Promise<{ posts: Post[] }> {
   const res = await axios.get(BASE_URL);
 
   return {

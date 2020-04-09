@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport { Header } from '../Header';\nimport { Wrapper } from './LayoutStyles';\nexport const Layout = ({\n  children\n}) => {\n  return __jsx(Wrapper, null, __jsx(Header, null), children);\n};","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nexport const Wrapper = styled.div.withConfig({\n  displayName: \"LayoutStyles__Wrapper\",\n  componentId: \"sc-11wpnqy-0\"\n})([\"max-width:1200px;width:100%;padding:40px 0;margin:0 auto;display:flex;justify-content:center;align-items:center;flex-direction:column;\"]);","map":null,"metadata":{},"sourceType":"module"}
